@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { motion, useScroll } from 'framer-motion';
 import Image from 'next/image';
 import { ImageSequenceAnimation } from './ImageSequenceAnimation';
+import { assetPath } from '@/lib/asset-path';
 
 export function Hero() {
   const containerRef = useRef<HTMLElement>(null);
@@ -42,7 +43,7 @@ export function Hero() {
           animate="visible"
         >
           <motion.div variants={itemVariants} className="mb-8">
-             <Image src="/images/vestige-logo.svg" alt="Vestige Logo" width={80} height={80} className="opacity-90" />
+             <Image src={assetPath('/images/vestige-logo.svg')} alt="Vestige Logo" width={80} height={80} className="opacity-90" />
           </motion.div>
           <motion.h1 variants={itemVariants} className="text-6xl md:text-7xl lg:text-9xl font-serif text-white mb-4 tracking-tight">
             Vestige

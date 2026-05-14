@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { X } from 'lucide-react';
+import { assetPath } from '@/lib/asset-path';
 
 const products = [
   {
@@ -11,7 +12,7 @@ const products = [
     title: 'The Botanist',
     tags: ['Fine', 'Dry'],
     notes: 'Lavender, Bergamot, White Pepper',
-    image: '/images/VestigeTheBotanist.png',
+    image: assetPath('/images/VestigeTheBotanist.png'),
     subtitle: '"Clarity in a pinch."',
     description: 'The Botanist is our most uplifting and brisk blend, designed to cut through brain fog and provide a sharp, immediate sense of clarity. It is milled to a very fine powder and kept completely dry, allowing for a swift, clean uptake that awakens the senses instantly.',
     base: 'Sun-cured, bright Virginia leaf, chosen for its naturally sweet, grassy notes and high nicotine yield.',
@@ -25,7 +26,7 @@ const products = [
     title: 'The Woodsman',
     tags: ['Medium', 'Moist'],
     notes: 'Cedar, Oakmoss, Dark Cocoa',
-    image: '/images/vestigeTheWoodsman.png',
+    image: assetPath('/images/vestigeTheWoodsman.png'),
     subtitle: '"Rooted in the earth."',
     description: 'The Woodsman is the anchor of the collection. It is a robust, deeply comforting blend that smells like a damp forest floor in late autumn. It has a slightly higher moisture content, making it easier to take for beginners, with a slower, more sustained release.',
     base: 'A blend of air-cured Burley and a touch of dark-fired Kentucky tobacco, giving it a naturally smoky, leathery foundation.',
@@ -39,7 +40,7 @@ const products = [
     title: 'The Alchemist',
     tags: ['Coarse', 'Dark'],
     notes: 'Black Cherry, Vanilla Bean, Clove',
-    image: '/images/vestigeTheAlchemist.png',
+    image: assetPath('/images/vestigeTheAlchemist.png'),
     subtitle: '"Decadence, dark and slow."',
     description: 'Inspired by the traditional German Schmalzler snuffs, The Alchemist is a rich, heavy, and intensely flavorful experience. It is the dessert of the snuff world—dark, oiled, and complex. Because of its coarse grind and high moisture, it sits very comfortably in the nose without traveling too far back.',
     base: 'Heavily fermented, dark South American tobaccos. The fermentation process removes the sharp edges, resulting in a deep, earthy, and naturally chocolaty profile.',

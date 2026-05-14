@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { assetPath } from '@/lib/asset-path';
 
 const InstagramIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -32,7 +33,7 @@ export function Footer() {
         {/* Brand Column */}
         <div className="col-span-1 md:col-span-1">
           <Link href="/" className="flex items-center gap-3 mb-6">
-            <Image src="/images/vestige-logo.svg" alt="Vestige Logo" width={32} height={32} className="opacity-90 grayscale" />
+            <Image src={assetPath('/images/vestige-logo.svg')} alt="Vestige Logo" width={32} height={32} className="opacity-90 grayscale" />
             <span className="text-xl font-serif text-white tracking-wider pt-1">Vestige</span>
           </Link>
           <p className="text-sm text-gray-500 font-sans leading-relaxed mb-6 pr-4">

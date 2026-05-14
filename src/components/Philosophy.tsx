@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { assetPath } from '@/lib/asset-path';
 
 export function Philosophy() {
   return (
@@ -53,7 +54,7 @@ export function Philosophy() {
               <div className="absolute inset-0 rounded-full border border-[#c5a059]/20 animate-pulse" style={{ animationDuration: '4s' }}></div>
               <div className="relative w-3/4 h-3/4 opacity-80">
                 <Image 
-                  src="/images/vestige-logo.svg" 
+                  src={assetPath('/images/vestige-logo.svg')}
                   alt="Vestige Emblem" 
                   fill 
                   className="object-contain" 

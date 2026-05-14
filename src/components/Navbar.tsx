@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import { assetPath } from '@/lib/asset-path';
 
 export function Navbar() {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -25,7 +26,7 @@ export function Navbar() {
       <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-dark-gray transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <Image src="/images/vestige-logo.svg" alt="Vestige Logo" width={36} height={36} className="opacity-90" />
+            <Image src={assetPath('/images/vestige-logo.svg')} alt="Vestige Logo" width={36} height={36} className="opacity-90" />
             <span className="text-2xl font-serif text-white tracking-wider pt-1">Vestige</span>
           </Link>
           

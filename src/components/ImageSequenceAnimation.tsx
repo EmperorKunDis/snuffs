@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useMotionValueEvent, MotionValue, useSpring } from 'framer-motion';
+import { assetPath } from '@/lib/asset-path';
 
 const TOTAL_FRAMES = 90;
 
@@ -28,7 +29,7 @@ export function ImageSequenceAnimation({ progress }: Props) {
     for (let i = 1; i <= TOTAL_FRAMES; i++) {
       const img = new window.Image();
       const frameStr = String(i).padStart(3, '0');
-      img.src = `/images/pourAnimation/ezgif-frame-${frameStr}.jpg`;
+      img.src = assetPath(`/images/pourAnimation/ezgif-frame-${frameStr}.jpg`);
       
       img.onload = () => {
         loadedCount++;
