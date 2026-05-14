@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { useMotionValueEvent, MotionValue } from 'framer-motion';
+import { useMotionValueEvent, MotionValue, useSpring } from 'framer-motion';
 
 const TOTAL_FRAMES = 90;
 
@@ -12,6 +12,13 @@ interface Props {
 export function ImageSequenceAnimation({ progress }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [images, setImages] = useState<HTMLImageElement[]>([]);
+
+  // Add smoothing to the scroll progress
+  const smoothProgress = useSpring(progress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
 
   // Preload all images
   useEffect(() => {
@@ -82,11 +89,10 @@ export function ImageSequenceAnimation({ progress }: Props) {
   }, [images]);
 
   // Handle scroll updates
-  useMotionValueEvent(progress, "change", (latest) => {
+  useMotionValueEvent(smoothProgress, "change", (latest) => {
     if (images.length !== TOTAL_FRAMES || !canvasRef.current) return;
 
     // Map scroll progress (0 to 1) to frame index (0 to 89)
-    // We want the full animation to finish slightly before the bottom, so multiply by 1.1 or clamp
     let frameIndex = Math.floor(latest * TOTAL_FRAMES);
     
     if (frameIndex >= TOTAL_FRAMES) frameIndex = TOTAL_FRAMES - 1;

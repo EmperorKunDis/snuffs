@@ -50,7 +50,7 @@ export function TheRitual() {
             <div className="md:w-3/4">
               <h3 className="text-2xl font-serif text-white mb-4">The Preparation</h3>
               <p className="text-gray-400 font-sans leading-relaxed">
-                The ritual begins before the tin is even opened. Ensure your hands are clean and dry. A true aficionado respects the product and the process. Hold the brushed aluminum tin in your hand, feeling its weight and temperature. Slide the mechanism open until it "clicks," releasing the initial aroma of the blend.
+                The ritual begins before the tin is even opened. Ensure your hands are clean and dry. A true aficionado respects the product and the process. Hold the brushed aluminum tin in your hand, feeling its weight and temperature. Slide the mechanism open until it &quot;clicks,&quot; releasing the initial aroma of the blend.
               </p>
             </div>
           </motion.div>
@@ -76,7 +76,7 @@ export function TheRitual() {
                 </div>
                 <div>
                   <span className="text-white font-serif">The Anatomical Snuffbox (The Continental Method): </span>
-                  <span className="text-gray-400 font-sans leading-relaxed">Tap a small mound—no larger than a lentil—onto the back of your hand, specifically in the small depression at the base of your thumb (historically known as the "anatomical snuffbox").</span>
+                  <span className="text-gray-400 font-sans leading-relaxed">Tap a small mound—no larger than a lentil—onto the back of your hand, specifically in the small depression at the base of your thumb (historically known as the &quot;anatomical snuffbox&quot;).</span>
                 </div>
               </div>
               <p className="text-sm text-[#c5a059] font-sans mt-4 italic opacity-90">
