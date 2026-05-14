@@ -1,26 +1,40 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+  
+  --color-black: #000000;
+  --color-dark-gray: #111111;
+  --color-muted-gold: #c5a059;
+  --color-sage: #8a9a86;
+  --color-forest: #2d4a22;
+  --color-plum: #4a2c40;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  background-color: var(--color-black);
+  color: #e5e7eb; /* gray-200 */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+/* Custom Utilities */
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility bg-radial-gradient {
+  background: radial-gradient(circle at center, rgba(30,30,30,1) 0%, rgba(0,0,0,1) 70%);
+}
+
+@utility glass-effect {
+  background: rgba(17, 17, 17, 0.4);
+  backdrop-filter: blur(8px);
 }
